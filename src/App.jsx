@@ -5,6 +5,7 @@ import Counter from "./pages/Counter";
 import Home from "./pages/Home";
 import Bgchanger from "./pages/Bgchanger";
 import Pswdgenerator from "./pages/Pswdgenerator";
+import Currencyconverter from "./pages/Currencyconverter";
 function App() {
   return (
     <Router>
@@ -82,18 +83,25 @@ function App() {
                   Password Generator
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/Currencyconverter"
+                  className="block px-3 py-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  Currency converter
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
-      <div>
-        <Routes>
-          <Route path="/counter" element={<Counter />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/Bgchanger" element={<Bgchanger />} />
-          <Route path="/Pswdgenerator" element={<Pswdgenerator />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Bgchanger" element={<Bgchanger />} />
+        <Route path="/Pswdgenerator" element={<Pswdgenerator />} />
+        <Route path="/Currencyconverter" element={<Currencyconverter />} />
+      </Routes>
     </Router>
   );
 }
